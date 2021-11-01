@@ -2,7 +2,8 @@
 #define __PLAYER_HPP
 
 #include "sdlgameobject.hpp"
-#include "gameobject.hpp"
+#include "game.hpp"
+//#include "gameobject.hpp"
 
 class Player: public SDLGameObject
 {
