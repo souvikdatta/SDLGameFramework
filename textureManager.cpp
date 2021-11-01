@@ -79,18 +79,18 @@ void TextureManager::drawFrame (const string textureID, const int xPos, \
 {
     SDL_Rect sRect, dRect;
     sRect.x = width * currFrameIndex;
-    cout << "sRect.x:" << sRect.x << endl;
+    // cout << "sRect.x:" << sRect.x << endl;
     sRect.y = height * (rowIndex - 1);
-    cout << "sRect.y:" << sRect.y << endl;
+    // cout << "sRect.y:" << sRect.y << endl;
     sRect.w = dRect.w = width;
     sRect.h = dRect.h = height;
-    cout << "width:" << width << endl;
-    cout << "height:" << height << endl;
+    // cout << "width:" << width << endl;
+    // cout << "height:" << height << endl;
 
     dRect.x = xPos;
-    cout << "dRect.x:" << dRect.x << endl;
+    // cout << "dRect.x:" << dRect.x << endl;
     dRect.y = yPos;
-    cout << "dRect.y:" << dRect.y << endl;
+    // cout << "dRect.y:" << dRect.y << endl;
 
     SDL_RenderCopyEx (pRenderer, m_textureMap[textureID], &sRect, &dRect, 0, 0, flip);
 }
