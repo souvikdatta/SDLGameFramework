@@ -2,10 +2,10 @@
 #define __GAME1_H
 
 #include <string>
-#include "common.hpp"
 #include "textureManager.hpp"
 #include "gameobject.hpp"
 #include "player.hpp"
+#include "enemy.hpp"
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include <iostream>
@@ -25,8 +25,6 @@ private:
     SDL_Rect m_sourceRectangle, m_destinationRectangle;
     //int m_currFrameIndex{0};
     GameObject *m_pGo;
-    //Player *m_pPlayer;
-
     vector<GameObject *> m_GameObjects;
     Game();
 public:
