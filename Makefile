@@ -2,8 +2,8 @@ CC=g++
 CFLAGS=`sdl2-config --libs --cflags` -D_REENTRANT -O0 -Wall -lSDL2_image -lm -I.
 EXE=game
 
-$(EXE):game.o main.o textureManager.o player.o
-	$(CC) player.o textureManager.o main.o game.o -o $(EXE) $(CFLAGS)
+$(EXE):game.o main.o textureManager.o player.o enemy.o
+	$(CC) enemy.o player.o textureManager.o main.o game.o -o $(EXE) $(CFLAGS)
 
 game.o:game.cpp game.hpp textureManager.hpp gameobject.hpp player.hpp loadparams.hpp sdlgameobject.hpp
 	$(CC) game.cpp -c -o game.o
@@ -16,6 +16,9 @@ textureManager.o:textureManager.cpp textureManager.hpp
 
 player.o:player.cpp player.hpp sdlgameobject.hpp gameobject.hpp
 	$(CC) player.cpp -c -o player.o
+
+enemy.o:enemy.cpp enemy.hpp sdlgameobject.hpp gameobject.hpp
+	$(CC) enemy.cpp -c -o enemy.o
 
 clean:
 	rm $(EXE) *.o
