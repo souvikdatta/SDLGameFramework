@@ -57,17 +57,6 @@ bool Game::init(const string nameOfWindow, const int xPos, \
 
                 m_GameObjects.push_back(new Player(new LoadParams(100, 100, 128, 82, "animate")));
                 m_GameObjects.push_back(new Player(new LoadParams(200, 200, 128, 82, "animate")));
-#if 0
-                //Create GameObject and PLayer Object
-                m_GameObjects.push_back (new GameObject());
-                //Call Load
-                m_GameObjects[0]->load ("animate", 100, 100, 128, 82);
-
-                m_GameObjects.push_back (new Player());
-                //Call Load
-                m_GameObjects[1]->load ("animate", 350, 350, 128, 82);
-#endif
-                //Now loop through the objects and call load functions of respective objects
             }
         }
         else 
@@ -89,42 +78,16 @@ void Game::render()
 {
     SDL_RenderClear (m_pRenderer);
 
-    // TextureManager::getInstance().draw ("animate", 0, 0, 128, 82, m_pRenderer);
-
-    // TextureManager::getInstance().drawFrame ("animate", 100, 100, \
-    //     128, 82, m_pRenderer, 1, m_currFrameIndex);
-
-    // m_go.draw (m_pRenderer);
-    // m_player.draw (m_pRenderer);
-
-#if 1
     for(auto &i: m_GameObjects)
         i->draw();
-#endif
+
     SDL_RenderPresent (m_pRenderer);
 }
 
 void Game::update()
 {
-#if 0
-    static unsigned int currTime, lastTime = 0;
-    static int index = 0;
-    currTime = SDL_GetTicks();
-    if(currTime >= lastTime + animDelayInMS)
-    {
-        //Move the source window in x Axis
-        m_currFrameIndex = index++ % 6;
-        lastTime = currTime;
-        if(index > 6)
-            index = 0;
-    }
-#endif
-    // m_go.update();
-    // m_player.update();
-#if 1    
     for(auto &i: m_GameObjects)
         i->update();
-#endif
 }
 
 void Game::handleEvents()
