@@ -57,6 +57,7 @@ bool Game::init(const string nameOfWindow, const int xPos, \
 
                 m_GameObjects.push_back(new Player(new LoadParams(100, 100, 128, 82, "animate")));
                 m_GameObjects.push_back(new Player(new LoadParams(200, 200, 128, 82, "animate")));
+                m_GameObjects.push_back(new Enemy(new LoadParams(300, 300, 128, 82, "animate")));
             }
         }
         else 
