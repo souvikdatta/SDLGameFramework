@@ -36,6 +36,7 @@ void Player::update()
 {
     m_X +=1;
     //cout << "Player::update() called:" << m_X << endl;
+    m_CurrentFrame = int(((SDL_GetTicks() / 100) % 6));
 }
 
 void Player::clean()
