@@ -2,9 +2,9 @@
 #define __SDLGAMEOBJECT_HPP
 
 #include "gameobject.hpp"
-#include "game.hpp"
+//#include "game.hpp"
 #include "loadparams.hpp"
-#include "textureManager.hpp"
+//#include "textureManager.hpp"
 
 
 class SDLGameObject : public GameObject
@@ -31,11 +31,6 @@ public:
         m_CurrentFrame = 0;
         m_RowNumber = 1;
     }
-
-
-    // virtual void draw(){}
-    // virtual void update(){}
-    // virtual void clean(){}
 
     virtual void draw() = 0;
     virtual void update() = 0;
