@@ -10,9 +10,10 @@ void Enemy::draw()
 
 void Enemy::update()
 {
-    m_position.setX(m_position.getX()+1);
-    cout << m_position.getX() << endl;
     m_CurrentFrame = int(((SDL_GetTicks() / 100) % 6));
+    //Update acceleration 
+    m_acceleration.setX(0.75);
+    SDLGameObject::update();
 }
 
 void Enemy::clean()

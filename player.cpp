@@ -25,8 +25,10 @@ void Player::draw()
 
 void Player::update()
 {
-    m_position.setX(m_position.getX()+1);
     m_CurrentFrame = int(((SDL_GetTicks() / 100) % 6));
+    //Update acceleration
+    m_acceleration.setX(0.25);
+    SDLGameObject::update();
 }
 
 void Player::clean()
