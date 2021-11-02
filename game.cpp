@@ -46,7 +46,7 @@ bool Game::init(const string nameOfWindow, const int xPos, \
             else
             {
                 //Set render color
-                SDL_SetRenderDrawColor (m_pRenderer, 255, 0, 0, 255);
+                SDL_SetRenderDrawColor (m_pRenderer, 0, 0, 0, 255);
 
 
                 if (TheTextureManager::getInstance().load ("assets/animate-alpha.png", \

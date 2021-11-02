@@ -5,7 +5,7 @@ EXE=game
 $(EXE):game.o main.o textureManager.o player.o enemy.o
 	$(CC) enemy.o player.o textureManager.o main.o game.o -o $(EXE) $(CFLAGS)
 
-game.o:game.cpp game.hpp textureManager.hpp gameobject.hpp player.hpp loadparams.hpp sdlgameobject.hpp
+game.o:game.cpp game.hpp textureManager.hpp gameobject.hpp player.hpp loadparams.hpp sdlgameobject.hpp vector2D.hpp
 	$(CC) game.cpp -c -o game.o
 
 main.o:main.cpp game.hpp
@@ -14,7 +14,7 @@ main.o:main.cpp game.hpp
 textureManager.o:textureManager.cpp textureManager.hpp
 	$(CC) textureManager.cpp -c -o textureManager.o
 
-player.o:player.cpp player.hpp sdlgameobject.hpp gameobject.hpp
+player.o:player.cpp player.hpp sdlgameobject.hpp gameobject.hpp 
 	$(CC) player.cpp -c -o player.o
 
 enemy.o:enemy.cpp enemy.hpp sdlgameobject.hpp gameobject.hpp

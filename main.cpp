@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
     //Init the game
-    if(TheGame::getInstance().init("Chap 1", 100, 100, 640, 480, false) == false)
+    if(TheGame::getInstance().init("Chap 1", 100, 100, 1920, 1080, false) == false)
         return 1;
     
     while(TheGame::getInstance().running())

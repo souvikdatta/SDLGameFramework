@@ -7,6 +7,7 @@
 class Enemy : public SDLGameObject
 {
 private:
+#if 0
     int m_x;
     int m_y;
     int m_width;
@@ -14,6 +15,7 @@ private:
     string m_textureID;
     int m_CurrentFrame;
     int m_RowNumber;
+#endif
 public:
     Enemy(LoadParams *pParams);
     virtual void draw();
